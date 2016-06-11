@@ -3,6 +3,7 @@
 	padding:0;
 	font-family:arial;
 }
+
 #nav-logo{
 	width:150px;
 	height:100%;
@@ -127,9 +128,13 @@ nav ul li p{
 }
 
 #mobile-menu{
+	position:absolute;
 	background:red;
-	height:160px;
-	display:none;
+	height:0px;
+	width:100%;
+	overflow:hidden;
+	z-index:10000;
+	transition:height 0.2s linear 0s;
 }
 
 #mobile-menu ul{
@@ -150,9 +155,85 @@ nav ul li p{
 	font-size:14px;
 }
 
+#mobile-menu ul :hover{
+	background:pink;
+}
+
 #mobile-menu ul li:hover{
 	text-align:center;
-	padding:10px 0;
-	color:black;
-	transition:1s;
+	color:green;
+}
+
+/*Animated X Plugin*/
+.menu {
+	position: relative;
+	display:  inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 25px;
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+	width: 30px;
+	height: 6px;
+	background-color: white;
+	display: block;
+}
+.menu span:before {
+	margin-top: -12px;
+}
+.menu span:after {
+	margin-top: 12px;
+}
+
+.menu span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.menu:hover span {
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.menu span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.menu:hover span:before {
+	margin-top: 0;
+	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.menu span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.menu:hover span:after {
+	margin-top: 0;
+	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+
+	
+	}
+
+#banner {
+    position:relative;
+    height:1000px;
+    overflow: hidden;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
+#banner .video {
+    min-width: 100%; 
+    min-height: 100%;
 }

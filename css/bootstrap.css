@@ -87,6 +87,12 @@
 	display: block;
 }
 
+@media only screen and (min-width:1025px){
+	#mobile-menu{
+		display:none;
+	}
+}
+
 @media(max-width: 1024px){
 	.col-tab1{
 	width: 8.33333333333%;
@@ -169,14 +175,16 @@
 		display:block;
 	}
 	
+	
 	nav ul{
 		list-style-type: none;
 		margin:auto;
 		width:500px;
 		height:100%;
-		border:2px solid pink;
 		display:none;
 	}
+
+
 }
 
 @media(max-width: 640px){
@@ -252,13 +260,6 @@
 	display: block;
 	}
 
-	#nav-toggle{
-		width:50px;
-		float:right;
-		color:white;
-		margin:25px;
-		display:block;
-}
 	nav ul{
 		list-style-type: none;
 		margin:auto;
@@ -266,5 +267,7 @@
 		height:100%;
 		display:none;
 	}
+
+
 
 }
